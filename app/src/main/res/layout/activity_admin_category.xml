@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCategoryActivity">
+
+    <TextView
+        android:id="@+id/slogan_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="Add New Product"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+
+
+    <LinearLayout
+        android:id="@+id/linear1_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/slogan_category"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/r_bags"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/reversebag12"
+            />
+
+        <ImageView
+            android:id="@+id/b_bag"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:src="@drawable/babybag1"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linear2_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1_category_layout"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="45dp">
+
+
+        <ImageView
+            android:id="@+id/tote"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bag1"
+            />
+
+        <ImageView
+            android:id="@+id/c_b_bags"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cbbag"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
