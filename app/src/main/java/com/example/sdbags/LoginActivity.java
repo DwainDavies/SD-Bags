@@ -2,10 +2,6 @@ package com.example.sdbags;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import androidx.annotation.NonNull;
-
-//import android.support.annotation.NonNull;
-//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sdbags.model.Users;
@@ -26,6 +23,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.rey.material.widget.CheckBox;
 
 import io.paperdb.Paper;
+
+//import android.support.annotation.NonNull;
+//import android.support.v7.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity
 {
@@ -140,23 +140,20 @@ public class LoginActivity extends AppCompatActivity
 
                     if (usersData.getPhone().equals(phone))
                     {
-                        if (usersData.getPassword().equals(password))
-                        {
-                            if (parentDbName.equals("Admins"))
-                            {
-                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in Successfully...", Toast.LENGTH_SHORT).show();
+                        if (usersData.getPassword().equals(password)) {
+                            if(parentDbName.equals("Admins")){
                                 loadingBar.dismiss();
+                                Toast.makeText(LoginActivity.this, "Welcome Admin, you are logged in successfully.", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
                                 startActivity(intent);
                             }
-                            else if (parentDbName.equals("Users"))
-                            {
-                                Toast.makeText(LoginActivity.this, "logged in Successfully...", Toast.LENGTH_SHORT).show();
+                            else if (parentDbName.equals("Users")){
                                 loadingBar.dismiss();
+                                Toast.makeText(LoginActivity.this, "Logged in successfully. ", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                Prevalent.currentOnlineUser = usersData;
+                                Prevalent .currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
                         }
